@@ -1,0 +1,17 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class MoneyUtilTest {
+
+    @Test
+    public void testConvertDollarsToCents() {
+        assertEquals(100, MoneyUtil.convertDollarsToCents(1));
+        assertEquals(250, MoneyUtil.convertDollarsToCents(3.50));
+    }
+
+    @Test
+    public void testConvertCentsToDollars() {
+        assertEquals(1.00, MoneyUtil.convertCentsToDollars(100), 0.01);
+        assertEquals(2.50, MoneyUtil.convertCentsToDollars(250), 0.01);
+    }
+}
